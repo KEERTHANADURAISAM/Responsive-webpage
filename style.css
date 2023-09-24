@@ -1,0 +1,184 @@
+/* header */
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+  /* one value mela another value add pana z index use */
+}
+header img {
+  height: 45px;
+}
+/* Banner Section */
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+/*position absolute use pannumna parent relative ah irukanum  */
+
+.banner h2 {
+  position: absolute;
+  top: 30%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5294117647058824);
+  border-radius: 5px;
+  color: whitesmoke;
+  left: 20px;
+}
+.banner {
+  position: relative;
+  text-align: center;
+}
+.banner h2 span {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+/* navigation Links */
+nav {
+  background-color: lightgray;
+  position: sticky;
+  top: 85px;
+  z-index: 1;
+}
+nav li {
+  display: inline-block;
+  width: 25%;
+  color: #174017;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+nav ul {
+  white-space: nowrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav li:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* main section */
+article {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+article h2,
+h3 {
+  color: #174017;
+  padding: 10px;
+}
+article p {
+  line-height: 1.4em;
+  letter-spacing: 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+article p::first-letter {
+  font-size: 1.5rem;
+}
+article p::selection {
+  background-color: cadetblue;
+}
+article ul li {
+  display: inline-block;
+  width: 45%;
+  margin-top: 30px;
+}
+article ul li img {
+  width: 90%;
+  max-width: 70%;
+  transition: transform.1s;
+}
+article ul li img:hover {
+  transform: scale(1.01);
+}
+/* states section */
+section.states {
+  background-color: #17406c;
+}
+.states-list {
+  max-width: 900px;
+  margin: 0 auto;
+  column-count: 4;
+  column-gap: 65px;
+  padding: 20px;
+}
+section.states ul {
+  list-style-type: none;
+  width: 75%;
+}
+section.states ul li {
+  line-height: 48px;
+}
+section.states ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: transform.1s;
+}
+section.states ul li a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  transform: scale(1.01);
+}
+/* footer */
+footer {
+  background-color: #17406c;
+  margin: 0 auto;
+  padding: 20px;
+}
+footer p {
+  text-align: center;
+  color: whitesmoke;
+}
+hr {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* media quereis  Break Points*/
+/* xs small =576px  medium=768px large-992 xl-1200 xxl-1400*/
+@media screen and (max-width:720px) {
+  header {
+    position: static;
+    background-color: transparent;
+  }
+  .banner {
+    position: static;
+    border-radius: 0;
+    margin: 0;
+    font-size: 0.95em;
+  }
+  nav li {
+    display: block;
+    line-height: 3px;
+  }
+  nav {
+    top:0;
+  }
+  article ul li{
+    display: block;
+    width:100%;
+  }
+  .states-list{
+    column-count: 2;
+  }
+}
+@media screen and (max-width:992px) {
+    header{
+        background-color: transparent;
+        position: static;
+    }
+    nav{
+        top:0px;
+    }
+    .banner h2{
+        font-size:1.1em ;
+    }
+}
